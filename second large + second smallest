@@ -1,0 +1,21 @@
+length = int(input())
+arr = list(map(int, input().split()))
+
+even_arr = []
+odd_arr = []
+
+for i in range(length):
+    if i % 2 == 0:
+        even_arr.append(arr[i])
+    else:
+        odd_arr.append(arr[i])
+
+even_arr = sorted(even_arr)
+odd_arr = sorted(odd_arr)
+
+# To find the second largest elements, use [-2] index after sorting
+if len(even_arr) >= 2 and len(odd_arr) >= 2:
+    result = even_arr[-2] + odd_arr[-2]
+    print(result)
+else:
+    print("Cannot compute. Ensure there are at least two elements in both even and odd positions.")
