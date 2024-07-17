@@ -1,0 +1,13 @@
+def findCount(arr, num, diff):
+    count = 0
+    for element in arr:
+        absolute_diff = abs(element - num)
+        if absolute_diff <= diff:
+            count += 1
+    if count == 0:
+        return -1
+    return count
+arr = list(map(int,input().split()))
+num = int(input())
+diff = int(input())
+print(findCount(arr, num, diff))
