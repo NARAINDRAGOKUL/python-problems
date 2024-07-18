@@ -1,0 +1,22 @@
+n = int(input())
+num = int(input())
+rem = []
+quo = num // n 
+rem.append(num%n)
+while quo != 0:
+    rem.append(quo%n)
+    quo = quo // n 
+rem = rem[::-1]
+equivalent = ''
+for i in rem:
+    if i > 9:
+        a = i - 9
+        a = 64 + a
+        equivalent+=chr(a)
+    else:
+        equivalent+=str(i)
+print(equivalent)
+  OUTPUT:
+  12
+  718
+  4BA
