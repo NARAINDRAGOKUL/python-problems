@@ -1,0 +1,13 @@
+def ReplaceCharacter(n,str1,str2):
+    result = ''
+    if n != None:
+        result = n.replace(str1,'*').replace(str2,str1).replace('*',str2)
+        return result
+    return 'Null'
+n = input()
+str1, str2 = map(str,input().split())
+print(ReplaceCharacter(n,str1,str2))
+output
+naraindragokul
+a f
+nfrfindrfgokul
