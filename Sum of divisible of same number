@@ -1,0 +1,10 @@
+
+m = int(input("M:"))
+n = int(input("N:"))
+def calculate(m, n):
+    sum = 0
+    for i in range(m,n+1,1):
+        if i%3 == 0 and i%5 == 0:
+            sum = sum + i
+    print(sum)
+calculate(m,n)
