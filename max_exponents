@@ -1,0 +1,23 @@
+def max_exponents(a, b):
+    def exponent_of_2(n):
+        exp = 0
+        while n % 2 == 0 and n > 0:
+            n //= 2
+            exp += 1
+        return exp
+
+    max_exp = -1
+    result = a
+
+    for i in range(a, b + 1):
+        exp = exponent_of_2(i)
+        if exp > max_exp or (exp == max_exp and i < result):
+            max_exp = exp
+            result = i
+
+    return result
+
+# Example usage
+a = 7
+b = 12
+print(max_exponents(a, b))  # Output: 8
